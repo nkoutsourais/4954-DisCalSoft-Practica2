@@ -7,7 +7,7 @@ import mastermind.views.console.ConsoleView;
 
 public class Mastermind {
 
-	private Logic logic;
+    private Logic logic;
     private View view;
 
     private Mastermind() {
@@ -22,9 +22,9 @@ public class Mastermind {
     public void play() {
         Controller controller;
         do {
-			controller = this.logic.getController();
-			if(controller != null)
-            	this.view.interact(controller);
+            controller = this.logic.getController();
+            if (controller != null)
+                this.view.interact(controller);
         } while (controller != null);
     }
 }

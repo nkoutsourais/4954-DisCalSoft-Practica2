@@ -20,23 +20,23 @@ public class Game {
 
     public void clear() {
         this.secretCombination = new SecretCombination();
-		this.proposedCombinations = new ArrayList<ProposedCombination>();
-		this.results = new ArrayList<Result>();
-	}
+        this.proposedCombinations = new ArrayList<ProposedCombination>();
+        this.results = new ArrayList<Result>();
+    }
 
-	public boolean isFinished() {
-		if (this.results.get(this.getAttemps() - 1).isWinner()) {
-			return true;
-		}
-		if (this.getAttemps() == Game.MAX_LONG) {
-			return true;
-		}
-		return false;
-	}
+    public boolean isFinished() {
+        if (this.results.get(this.getAttemps() - 1).isWinner()) {
+            return true;
+        }
+        if (this.getAttemps() == Game.MAX_LONG) {
+            return true;
+        }
+        return false;
+    }
 
-	public int getAttemps() {
-		return this.proposedCombinations.size();
-	}
+    public int getAttemps() {
+        return this.proposedCombinations.size();
+    }
 
     public List<ProposedCombination> getProposedCombinations() {
         return proposedCombinations;

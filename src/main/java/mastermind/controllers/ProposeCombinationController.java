@@ -17,7 +17,7 @@ public class ProposeCombinationController extends Controller {
         this.game.getProposedCombinations().add(proposedCombination);
         Result result = this.game.getSecretCombination().getResult(proposedCombination);
         this.game.getResults().add(result);
-        if(this.game.isFinished())
+        if (this.game.isFinished())
             this.state.next();
     }
 }

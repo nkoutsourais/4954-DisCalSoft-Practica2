@@ -9,22 +9,22 @@ import mastermind.utils.WithConsoleModel;
 
 public class ProposedCombinationView extends WithConsoleModel {
 
-    private final Controller controller;
+	private final Controller controller;
 
-    public ProposedCombinationView(Controller controller) {
-        this.controller = controller;
-    }
+	public ProposedCombinationView(Controller controller) {
+		this.controller = controller;
+	}
 
-    public void write(int attempt) {
-        ProposedCombination proposedCombination = this.controller.getProposedCombinations().get(attempt);
-        for (Color color : proposedCombination.getColors()) {
-            this.console.write(color.getInitial());
-        }
-    }
+	public void write(int attempt) {
+		ProposedCombination proposedCombination = this.controller.getProposedCombinations().get(attempt);
+		for (Color color : proposedCombination.getColors()) {
+			this.console.write(color.getInitial());
+		}
+	}
 
-    public ProposedCombination read() {
-        Error error;
-        List<Color> colors = new ArrayList<Color>();
+	public ProposedCombination read() {
+		Error error;
+		List<Color> colors = new ArrayList<Color>();
 		do {
 			error = null;
 			this.console.write(Message.PROPOSED_COMBINATION.getMessage());
@@ -37,8 +37,8 @@ public class ProposedCombinationView extends WithConsoleModel {
 					if (color == null) {
 						error = Error.WRONG_CHARACTERS;
 					} else {
-						for(int j=0; j< colors.size(); j++){
-							if (color == colors.get(j)){
+						for (int j = 0; j < colors.size(); j++) {
+							if (color == colors.get(j)) {
 								error = Error.DUPLICATED;
 							}
 						}
@@ -48,11 +48,11 @@ public class ProposedCombinationView extends WithConsoleModel {
 			}
 			if (error != null) {
 				this.console.writeln(error.getMessage());
-				while (!colors.isEmpty()){
+				while (!colors.isEmpty()) {
 					colors.remove(0);
 				}
 			}
 		} while (error != null);
-        return new ProposedCombination(colors);
+		return new ProposedCombination(colors);
 	}
 }

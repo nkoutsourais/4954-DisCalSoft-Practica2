@@ -1,12 +1,7 @@
 package mastermind.models;
 
 public enum Color {
-	RED('r'), 
-	BLUE('b'), 
-	YELLOW('y'), 
-	GREEN('g'), 
-	ORANGE('o'), 
-	PURPLE('p');
+	RED('r'), BLUE('b'), YELLOW('y'), GREEN('g'), ORANGE('o'), PURPLE('p');
 
 	private char initial;
 
@@ -20,7 +15,7 @@ public enum Color {
 
 	public static String allInitials() {
 		String result = "";
-		for(Color color: Color.values()) {
+		for (Color color : Color.values()) {
 			result += color.initial;
 		}
 		return result;

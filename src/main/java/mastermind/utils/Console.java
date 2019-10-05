@@ -21,7 +21,7 @@ public class Console {
 		} while (!ok);
 		return input;
 	}
-	
+
 	public String readString() {
 		return this.readString("");
 	}

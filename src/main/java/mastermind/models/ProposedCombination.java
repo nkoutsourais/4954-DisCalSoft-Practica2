@@ -4,11 +4,11 @@ import java.util.List;
 
 public class ProposedCombination extends Combination {
 
-    public ProposedCombination(List<Color> colors) {
-        this.colors = colors;
-    }
+	public ProposedCombination(List<Color> colors) {
+		this.colors = colors;
+	}
 
-    boolean contains(Color color, int position) {
+	boolean contains(Color color, int position) {
 		return this.colors.get(position) == color;
 	}
 
@@ -19,5 +19,5 @@ public class ProposedCombination extends Combination {
 			}
 		}
 		return false;
-    }
+	}
 }

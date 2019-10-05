@@ -7,8 +7,8 @@ public class SecretCombinationView extends WithConsoleModel {
 
     public void writeSecretCombination() {
         for (int i = 0; i < SecretCombination.getWidth(); i++) {
-			this.console.write(Message.SECRET.getMessage());
-		}
-		this.console.write(Message.NEW_LINE.getMessage());
+            this.console.write(Message.SECRET.getMessage());
+        }
+        this.console.write(Message.NEW_LINE.getMessage());
     }
 }

@@ -5,7 +5,7 @@ import mastermind.models.Result;
 import mastermind.utils.WithConsoleModel;
 
 public class ResultCombinationView extends WithConsoleModel {
-    
+
     private final Controller controller;
 
     public ResultCombinationView(Controller controller) {
@@ -14,6 +14,7 @@ public class ResultCombinationView extends WithConsoleModel {
 
     public void writeln(int attempt) {
         Result result = this.controller.getResults().get(attempt);
-        this.console.writeln(Message.RESULT.getMessage().replaceFirst("#blacks", "" + result.getBlacks()).replaceFirst("#whites", "" + result.getWhites()));
+        this.console.writeln(Message.RESULT.getMessage().replaceFirst("#blacks", "" + result.getBlacks())
+                .replaceFirst("#whites", "" + result.getWhites()));
     }
 }

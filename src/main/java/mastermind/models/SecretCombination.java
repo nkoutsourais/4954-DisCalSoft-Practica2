@@ -6,7 +6,7 @@ import java.util.Collections;
 public class SecretCombination extends Combination {
 
 	public SecretCombination() {
-		for(Color color : Color.values()){
+		for (Color color : Color.values()) {
 			this.colors.add(color);
 		}
 		Random random = new Random(System.currentTimeMillis());
@@ -19,7 +19,7 @@ public class SecretCombination extends Combination {
 
 	public Result getResult(ProposedCombination proposedCombination) {
 		int blacks = 0;
-		for (int i=0; i<this.colors.size(); i++) {
+		for (int i = 0; i < this.colors.size(); i++) {
 			if (proposedCombination.contains(this.colors.get(i), i)) {
 				blacks++;
 			}

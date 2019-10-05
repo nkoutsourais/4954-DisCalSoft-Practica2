@@ -15,8 +15,8 @@ public abstract class Controller {
     }
 
     public SecretCombination getSecretCombination() {
-		return this.game.getSecretCombination();
-	}
+        return this.game.getSecretCombination();
+    }
 
     public List<ProposedCombination> getProposedCombinations() {
         return this.game.getProposedCombinations();
@@ -27,12 +27,12 @@ public abstract class Controller {
     }
 
     public int getAttemps() {
-		return this.game.getProposedCombinations().size();
+        return this.game.getProposedCombinations().size();
     }
 
-	public boolean isWinner() {
-		return this.game.getResults().get(getAttemps() - 1).isWinner();
+    public boolean isWinner() {
+        return this.game.getResults().get(getAttemps() - 1).isWinner();
     }
-    
+
     public abstract void accept(ControllerVisitor controllerVisitor);
 }
